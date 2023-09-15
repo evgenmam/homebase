@@ -4,7 +4,7 @@ export const fetchCityBoundaryData = async (stateChoices) => {
   const promises = []
   lowercaseStateAbbreviations.forEach((state) => {
     if (stateChoices.includes(state)) {
-      const cityDataUrl = `https://raw.githubusercontent.com/wynander/geojson-us-city-boundaries/master/states/${state}.json`
+      const cityDataUrl = `https://raw.githubusercontent.com/evgenmam/geojson-us-city-boundaries/master/states/${state}.json`
       promises.push(fetch(cityDataUrl))
     }
   })
